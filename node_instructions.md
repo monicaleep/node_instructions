@@ -15,7 +15,7 @@ then in your app just use `const basic = require('./beBasic')`
 Install node packages in your terminal (inside project folder) with `npm i <pkg-name>` - express, ejs, express-ejs-layouts axios dotenv
 - const express = require('express')
 - const app = express()
-- touch .gitignore => node_modules, .env
+
 
 Run the app to listen on port 8000:
 
@@ -77,6 +77,20 @@ There is an npm package express-ejs-layouts which allows you to use page layouts
 ```
 Then the individual .ejs files you make will be injected into the layout.ejs file where the body part is.
 
+#### Environment Variables:
+You can keep certain things 'secret' from your app by putting them in a `.env` file in your root directory of the project. To use them, you need to install the node package `dotenv` and require/config it with the code: `require('dotenv').config()`. Then all variables defined inside your `.env` file can be accessed via `process.env.PORT` (for the key PORT=3000 this would resolve to 3000)
+```
+PORT=3000
+API_KEY=abc123
+```
+
+#### gitignore
+This file `.gitignore` will tell github which directories or files not to track. Important to include both `.env` (for security) and `node_modules` for size.
+- touch .gitignore  
+ ```
+ node_modules
+ .env
+```
 
 #### Sequelize
 ##### Setup
