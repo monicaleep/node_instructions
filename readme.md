@@ -110,3 +110,5 @@ Then create the models by running:
 with whatever table columns and types you want. The word after `--name` will be the name of your model. Running this command will create the js file in your `/models` directory which you should check.
 ##### Run migration
 To migrate the model into your database you can run: `sequelize db:migrate` which will create the table `users` in this case.
+##### Include in your app
+To include in your app add the code `const db = require('./models')` to whereever your routes are
