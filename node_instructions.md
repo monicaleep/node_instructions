@@ -5,16 +5,23 @@
 - create entry point file 'index.js'
 - run entry point file with 'node index.js'
 
+#### Node Modules
 Node modules are including using the `requires(<module>)` statement. These can be files on your computer, default modules like HTTPServer or fs (filesystem) or 3rd party modules. You can write your own node module as a javascript file by exporting it as an object on `module.exports.myModule` like this:
 ```js
 module.exports.beBasic = () => "That's so fetch"
 ```
 then in your app just use `const basic = require('./beBasic')`
 
-##### Node Packages
+#### Node Packages
 Install node packages in your terminal (inside project folder) with `npm i <pkg-name>` - express, ejs, express-ejs-layouts axios dotenv
-- const express = require('express')
-- const app = express()
+
+#### Add Express to node app
+install express using npm
+At the top of your code:
+```
+const express = require('express')
+const app = express()
+```
 
 
 Run the app to listen on port 8000:
